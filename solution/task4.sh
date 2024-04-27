@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
-# ≤Î“’·‚ÿ ‘–‚„ “ ‰ﬁ‡‹–‚’:
+# –í—ã–≤–µ—Å—Ç–∏ –¥–∞—Ç—É –≤ —Ñ–æ—Ä–º–∞—Ç–µ:
 #   Freitag, 13. Oktober 2023
-date '+???' -d "$@"
+
+export LC_ALL=de_DE.utf8
+date_str=$1
+
+formatted_date=$(date -d "$date_str" +'%A, %d. %B %Y')
+echo "$formatted_date"
